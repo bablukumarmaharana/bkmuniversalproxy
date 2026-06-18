@@ -384,6 +384,23 @@ If the proxy is configured correctly, the IP address displayed should match your
 
 ---
 
+## 🔒 Security Notice
+
+By default, BKMUniversalProxy does not require authentication.
+
+Anyone who can reach the proxy port can use the proxy.
+
+For public deployments, restrict access using:
+
+- Firewall rules
+- IP allowlists
+- VPN access
+- Reverse proxy authentication
+
+Only expose the proxy to trusted users.
+
+---
+
 ## 🤝 Contributing
 
 Contributions are welcome! If you find a bug, have a feature request, or want to add support for a new distribution, please open an issue or submit a pull request.
