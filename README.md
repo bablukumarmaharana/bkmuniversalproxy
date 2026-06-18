@@ -44,3 +44,12 @@ Just run this single command (as `root` or with `sudo`):
 
 ```bash
 curl -sSL https://raw.githubusercontent.com/bablu-kumar/bkmuniversalproxy/main/install.sh | bash
+
+Or, if you have the script locally:
+
+```bash
+chmod +x install.sh
+./install.sh          # uses port 8080
+./install.sh 9090     # uses custom port
+
+
