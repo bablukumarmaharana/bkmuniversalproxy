@@ -1,3 +1,8 @@
+Here is the updated `README.md` file that matches your repository **exactly** (no `proxy.py` file – it's embedded inside `install.sh`). Just copy everything and save as `README.md`.
+
+---
+
+```markdown
 # 🚀 BKMUniversalProxy
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -7,7 +12,6 @@
 **One script. One port. All protocols. Any Linux.**
 
 BKMUniversalProxy is a lightweight, zero‑dependency multi‑protocol proxy server that runs on **any Linux distribution** – from Ubuntu 14.04 to RHEL 9, from Alpine to Arch, from Gentoo to Slackware. It automatically detects your OS, package manager, init system, and firewall, then sets up a fully functional proxy in seconds.
-
 
 ```
 ╔═══════════════════════════════════════════════════════════════════╗
@@ -45,7 +49,7 @@ BKMUniversalProxy is a lightweight, zero‑dependency multi‑protocol proxy ser
 Just run this single command (as `root` or with `sudo`):
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/bablu-kumar/bkmuniversalproxy/main/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/bablukumarmaharana/bkmuniversalproxy/main/install.sh | bash
 ```
 
 Or, if you have the script locally:
@@ -60,7 +64,7 @@ The installer will:
 
 1. Detect your Linux distribution, version, package manager, init system, and firewall.
 2. Install Python 3 if missing.
-3. Deploy the proxy script to `/usr/local/bin/proxy.py`.
+3. Deploy the proxy script to `/usr/local/bin/proxy.py` (embedded within `install.sh`).
 4. Create and start a persistent system service.
 5. Open the firewall for your chosen port.
 6. Test the proxy with `curl` and show a beautiful ASCII banner.
@@ -120,18 +124,15 @@ If your distribution is not listed, the installer will likely still work – it 
 
 ## 🔧 Manual Installation (without the installer)
 
-If you prefer to install manually, you can just run the proxy directly:
+If you prefer to install manually, you can extract the proxy code from `install.sh` and run it directly.
 
 ```bash
-# Save the proxy script (from this repo) as proxy.py
-python3 /usr/local/bin/proxy.py 8080
+# Extract the embedded proxy script
+sed -n '/^cat > "\$PROXY_SCRIPT" << .*EOF/,/^EOF/p' install.sh | head -n -1 | tail -n +2 > proxy.py
+python3 proxy.py 8080
 ```
 
-To run it in the background with `nohup`:
-
-```bash
-nohup python3 /usr/local/bin/proxy.py 8080 &
-```
+Or simply run the installer with the `--manual` flag (not implemented – but you can run the script directly as above).
 
 ---
 
@@ -163,10 +164,12 @@ Set your browser's proxy to `localhost:8080` and visit any HTTPS site.
 
 ```
 .
-├── install.sh          # Universal installer script
+├── install.sh          # The universal installer (embeds the proxy script)
 ├── README.md           # This file
 └── LICENSE             # MIT License
 ```
+
+> **Note:** The actual proxy code is embedded inside `install.sh` – no separate `proxy.py` file is needed.
 
 ---
 
@@ -212,9 +215,10 @@ furnished to do so, subject to the following conditions:
 ## 📬 Contact
 
 **Bablu Kumar Maharana**  
-GitHub: [@bablukumarmaharana]([https://github.com/bablu-kumar](https://github.com/bablukumarmaharana/))  
-Project: [bkmuniversalproxy](https://github.com/bablukumarmaharana/bkmuniversalproxy/)
+GitHub: [@bablukumarmaharana](https://github.com/bablukumarmaharana)  
+Project: [bkmuniversalproxy](https://github.com/bablukumarmaharana/bkmuniversalproxy)
 
 ---
 
 **Star ⭐ this repository if you find it useful!**
+```
