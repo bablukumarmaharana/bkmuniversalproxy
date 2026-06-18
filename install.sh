@@ -26,17 +26,22 @@ fi
 # ---------- ASCII Banner ----------
 display_banner() {
     echo -e "${CYAN}"
-    echo '╔═══════════════════════════════════════════════════════════════════╗'
-    echo '║                                                                   ║'
-    echo '║           B K M U N I V E R S A L P R O X Y                      ║'
-    echo '║                                                                   ║'
-    echo '║   Universal Multi-Protocol Proxy Installer v1.0                  ║'
-    echo '║   HTTP/HTTPS/HTTP2 | SOCKS4(A) | SOCKS5                         ║'
-    echo '║                                                                   ║'
-    printf '║   📦 Installation Complete on port %-42s ║\n' "$PORT"
-    echo '║   🚀 Proxy is ready to use!                                     ║'
-    echo '║                                                                   ║'
-    echo '╚═══════════════════════════════════════════════════════════════════╝'
+    echo '╔══════════════════════════════════════════════════════════════════╗'
+    echo '║                                                                  ║'
+    echo '║          ██████╗ ██╗  ██╗███╗   ███╗██╗   ██╗███╗   ██╗██╗   ██╗ ║'
+    echo '║          ██╔══██╗██║ ██╔╝████╗ ████║██║   ██║████╗  ██║██║   ██║ ║'
+    echo '║          ██████╔╝█████╔╝ ██╔████╔██║██║   ██║██╔██╗ ██║██║   ██║ ║'
+    echo '║          ██╔══██╗██╔═██╗ ██║╚██╔╝██║██║   ██║██║╚██╗██║██║   ██║ ║'
+    echo '║          ██████╔╝██║  ██╗██║ ╚═╝ ██║╚██████╔╝██║ ╚████║╚██████╔╝ ║'
+    echo '║          ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝  ║'
+    echo '║                                                                  ║'
+    echo '║        Universal Multi-Protocol Proxy Installer v1.0             ║'
+    echo '║        HTTP/HTTPS/HTTP2 | SOCKS4(A) | SOCKS5                    ║'
+    echo '║                                                                  ║'
+    echo '║        📦 One-port, multi-protocol proxy for any Linux          ║'
+    echo '║        🚀 Zero external dependencies – pure Python              ║'
+    echo '║                                                                  ║'
+    echo '╚══════════════════════════════════════════════════════════════════╝'
     echo -e "${NC}"
 }
 
