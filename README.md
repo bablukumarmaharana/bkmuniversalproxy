@@ -211,12 +211,6 @@ SOFTWARE.
 
 ---
 
-## 🙏 Acknowledgements
-
-- Inspired by [gost](https://github.com/ginuerzh/gost) – but designed to be lighter, more portable, and with a smarter installer.
-- Built with pure Python and a lot of `select()`.
-
----
 
 ## 📬 Contact
 
@@ -227,4 +221,3 @@ Project: [bkmuniversalproxy](https://github.com/bablukumarmaharana/bkmuniversalp
 ---
 
 **Star ⭐ this repository if you find it useful!**
-```
