@@ -1,4 +1,3 @@
-```
 # 🚀 BKMUniversalProxy
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -8,6 +7,7 @@
 **One script. One port. All protocols. Any Linux.**
 
 BKMUniversalProxy is a lightweight, zero‑dependency multi‑protocol proxy server that runs on **any Linux distribution** – from Ubuntu 14.04 to RHEL 9, from Alpine to Arch, from Gentoo to Slackware. It automatically detects your OS, package manager, init system, and firewall, then sets up a fully functional proxy in seconds.
+
 
 ```
 ╔═══════════════════════════════════════════════════════════════════╗
@@ -212,10 +212,9 @@ furnished to do so, subject to the following conditions:
 ## 📬 Contact
 
 **Bablu Kumar Maharana**  
-GitHub: [@bablu-kumar](https://github.com/bablu-kumar)  
-Project: [bkmuniversalproxy](https://github.com/bablu-kumar/bkmuniversalproxy)
+GitHub: [@bablukumarmaharana]([https://github.com/bablu-kumar](https://github.com/bablukumarmaharana/))  
+Project: [bkmuniversalproxy](https://github.com/bablukumarmaharana/bkmuniversalproxy/)
 
 ---
 
 **Star ⭐ this repository if you find it useful!**
-```
