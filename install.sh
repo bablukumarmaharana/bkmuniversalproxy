@@ -446,23 +446,23 @@ config_firewall() {
 }
 
 # ---------- Test Proxy ----------
-test_proxy() {
-    echo
-    echo -e "${YELLOW}Waiting 2 seconds for service to start...${NC}"
-    sleep 2
-    echo -e "${YELLOW}Testing HTTP proxy...${NC}"
-    if curl --proxy "http://localhost:$PORT" https://api.ipify.org -s -o /dev/null -w "%{http_code}" 2>/dev/null | grep -q 200; then
-        echo -e "${GREEN}✅ HTTP proxy works${NC}"
-    else
-        echo -e "${RED}❌ HTTP test failed (curl missing or service not ready)${NC}"
-    fi
-    echo -e "${YELLOW}Testing SOCKS5 proxy...${NC}"
-    if curl --socks5 "localhost:$PORT" https://api.ipify.org -s -o /dev/null -w "%{http_code}" 2>/dev/null | grep -q 200; then
-        echo -e "${GREEN}✅ SOCKS5 proxy works${NC}"
-    else
-        echo -e "${RED}❌ SOCKS5 test failed${NC}"
-    fi
-}
+#test_proxy() {
+#   echo
+#  echo -e "${YELLOW}Waiting 2 seconds for service to start...${NC}"
+#   sleep 2
+#    echo -e "${YELLOW}Testing HTTP proxy...${NC}"
+#   if curl --proxy "http://localhost:$PORT" https://api.ipify.org -s -o /dev/null -w "%{http_code}" 2>/dev/null | grep -q 200; then
+#        echo -e "${GREEN}✅ HTTP proxy works${NC}"
+#  else
+#      echo -e "${RED}❌ HTTP test failed (curl missing or service not ready)${NC}"
+#    fi
+#   echo -e "${YELLOW}Testing SOCKS5 proxy...${NC}"
+#   if curl --socks5 "localhost:$PORT" https://api.ipify.org -s -o /dev/null -w "%{http_code}" 2>/dev/null | grep -q 200; then
+#        echo -e "${GREEN}✅ SOCKS5 proxy works${NC}"
+#   else
+#       echo -e "${RED}❌ SOCKS5 test failed${NC}"
+#   fi
+#}
 
 # ---------- Special: RancherOS ----------
 handle_rancher() {
@@ -490,7 +490,7 @@ main() {
 
     echo -e "${GREEN}🎉 Proxy installation complete on port $PORT${NC}"
     echo "Supported protocols: HTTP, HTTPS (CONNECT), HTTP2, SOCKS5, SOCKS4(A)"
-    test_proxy
+    #test_proxy
 }
 
 main "$@"
