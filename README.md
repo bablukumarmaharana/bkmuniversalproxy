@@ -155,6 +155,222 @@ Set your browser's proxy to `localhost:8080` and visit any HTTPS site.
 
 ---
 
+## 🧪 Before You Start
+
+After installing BKMUniversalProxy, you will need two pieces of information:
+
+### 1. Your Server IP Address
+
+This is the public IP address of the Linux server where BKMUniversalProxy is installed.
+
+Example:
+
+```text
+203.0.113.10
+```
+
+### 2. Your Proxy Port
+
+By default, BKMUniversalProxy uses:
+
+```text
+8080
+```
+
+Unless you specified a different port during installation, use **8080**.
+
+### Example Proxy Details
+
+If your server IP is:
+
+```text
+203.0.113.10
+```
+
+and your proxy port is:
+
+```text
+8080
+```
+
+then your proxy settings will be:
+
+```text
+Server Address: 203.0.113.10
+Port: 8080
+```
+
+You will use these same details when configuring:
+
+* Windows 10 / Windows 11
+* macOS (MacBook)
+* Android Phones & Tablets
+* iPhone & iPad (iOS)
+* Google Chrome
+* Microsoft Edge
+* Mozilla Firefox
+* Safari
+* Any application that supports HTTP or SOCKS proxies
+
+---
+
+## 📱 Android
+
+### HTTP / HTTPS Proxy
+
+1. Open **Settings**
+2. Go to **Wi-Fi**
+3. Press and hold your connected Wi-Fi network
+4. Tap **Modify Network**
+5. Tap **Advanced Options**
+6. Set:
+
+```text
+Proxy = Manual
+```
+
+7. Enter:
+
+```text
+Proxy Hostname = Your Server IP
+Proxy Port = 8080
+```
+
+Example:
+
+```text
+Proxy Hostname = 203.0.113.10
+Proxy Port = 8080
+```
+
+8. Save the settings
+
+Your Android device will now use the proxy.
+
+---
+
+## 🍎 iPhone / iPad (iOS)
+
+### HTTP / HTTPS Proxy
+
+1. Open **Settings**
+2. Tap **Wi-Fi**
+3. Tap the **ⓘ** icon beside your connected network
+4. Scroll down to:
+
+```text
+Configure Proxy
+```
+
+5. Select:
+
+```text
+Manual
+```
+
+6. Enter:
+
+```text
+Server = Your Server IP
+Port = 8080
+```
+
+Example:
+
+```text
+Server = 203.0.113.10
+Port = 8080
+```
+
+7. Tap **Save**
+
+Your iPhone or iPad will now use the proxy.
+
+---
+
+## 💻 Windows 10 / Windows 11
+
+1. Open:
+
+```text
+Settings → Network & Internet → Proxy
+```
+
+2. Enable:
+
+```text
+Use a proxy server
+```
+
+3. Enter:
+
+```text
+Address = Your Server IP
+Port = 8080
+```
+
+Example:
+
+```text
+Address = 203.0.113.10
+Port = 8080
+```
+
+4. Click **Save**
+
+---
+
+## 🍎 macOS (MacBook)
+
+1. Open:
+
+```text
+System Settings → Network
+```
+
+2. Select your active network
+3. Click:
+
+```text
+Details → Proxies
+```
+
+4. Enable:
+
+```text
+Web Proxy (HTTP)
+Secure Web Proxy (HTTPS)
+```
+
+5. Enter:
+
+```text
+Server = Your Server IP
+Port = 8080
+```
+
+Example:
+
+```text
+Server = 203.0.113.10
+Port = 8080
+```
+
+6. Click **Apply**
+
+---
+
+## ✅ Verify That the Proxy Is Working
+
+Open:
+
+```text
+https://api.ipify.org
+```
+
+If the proxy is configured correctly, the IP address displayed should match your Linux server's public IP address.
+
+
 ## 📂 Repository Structure
 
 ```
