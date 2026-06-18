@@ -25,25 +25,26 @@ fi
 
 # ---------- ASCII Banner ----------
 display_banner() {
-    echo -e "${CYAN}"
-    echo '╔════════════════════════════════════════════════════════════════════════════╗'
-    echo '║                                                                            ║'
-    echo '║    ██████╗ ██╗  ██╗███╗   ███╗██╗   ██╗███╗   ██╗██╗   ██╗                ║'
-    echo '║    ██╔══██╗██║ ██╔╝████╗ ████║██║   ██║████╗  ██║██║   ██║                ║'
-    echo '║    ██████╔╝█████╔╝ ██╔████╔██║██║   ██║██╔██╗ ██║██║   ██║                ║'
-    echo '║    ██╔══██╗██╔═██╗ ██║╚██╔╝██║██║   ██║██║╚██╗██║██║   ██║                ║'
-    echo '║    ██████╔╝██║  ██╗██║ ╚═╝ ██║╚██████╔╝██║ ╚████║╚██████╔╝                ║'
-    echo '║    ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝                 ║'
-    echo '║                                                                            ║'
-    echo '║                 Universal Multi-Protocol Proxy Installer v1.0             ║'
-    echo '║                                                                            ║'
-    echo '║                   HTTP/HTTPS/HTTP2 | SOCKS4(A) | SOCKS5                   ║'
-    echo '║                                                                            ║'
-    echo '║                One-Port Multi-Protocol Proxy for Any Linux                ║'
-    echo '║                Zero External Dependencies - Pure Python                   ║'
-    echo '║                                                                            ║'
-    echo '╚════════════════════════════════════════════════════════════════════════════╝'
-    echo -e "${NC}"
+
+echo -e "${CYAN}══════════════════════════════════════════════════════════════════════════════${NC}"
+echo
+
+echo -e "${BLUE}██████╗${CYAN} ██╗  ██╗${GREEN}███╗   ███╗${YELLOW}██╗   ██╗${MAGENTA}███╗   ██╗${RED}██╗   ██╗${NC}"
+echo -e "${BLUE}██╔══██╗${CYAN}██║ ██╔╝${GREEN}████╗ ████║${YELLOW}██║   ██║${MAGENTA}████╗  ██║${RED}██║   ██║${NC}"
+echo -e "${BLUE}██████╔╝${CYAN}█████╔╝ ${GREEN}██╔████╔██║${YELLOW}██║   ██║${MAGENTA}██╔██╗ ██║${RED}██║   ██║${NC}"
+echo -e "${BLUE}██╔══██╗${CYAN}██╔═██╗ ${GREEN}██║╚██╔╝██║${YELLOW}██║   ██║${MAGENTA}██║╚██╗██║${RED}██║   ██║${NC}"
+echo -e "${BLUE}██████╔╝${CYAN}██║  ██╗${GREEN}██║ ╚═╝ ██║${YELLOW}╚██████╔╝${MAGENTA}██║ ╚████║${RED}╚██████╔╝${NC}"
+echo -e "${BLUE}╚═════╝ ${CYAN}╚═╝  ╚═╝${GREEN}╚═╝     ╚═╝${YELLOW} ╚═════╝ ${MAGENTA}╚═╝  ╚═══╝ ${RED}╚═════╝ ${NC}"
+
+echo
+echo -e "${WHITE}        UNIVERSAL MULTI-PROTOCOL PROXY INSTALLER ${GREEN}v1.0${NC}"
+echo
+echo -e "${CYAN}         HTTP${WHITE} • ${GREEN}HTTPS${WHITE} • ${YELLOW}HTTP/2${WHITE} • ${MAGENTA}SOCKS4A${WHITE} • ${RED}SOCKS5${NC}"
+echo
+echo -e "${BLUE}      One Port${WHITE} • ${GREEN}Multi Protocol${WHITE} • ${CYAN}Any Linux Distribution${NC}"
+echo
+echo -e "${CYAN}══════════════════════════════════════════════════════════════════════════════${NC}"
+
 }
 
 # ---------- OS Detection ----------
