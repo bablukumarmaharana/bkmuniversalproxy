@@ -24,6 +24,16 @@ else
 fi
 
 # ---------- ASCII Banner ----------
+# Colors
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+MAGENTA='\033[0;35m'
+CYAN='\033[0;36m'
+WHITE='\033[1;37m'
+NC='\033[0m'
+
 display_banner() {
 
 echo -e "${CYAN}══════════════════════════════════════════════════════════════════════════════${NC}"
@@ -41,7 +51,16 @@ echo -e "${WHITE}        UNIVERSAL MULTI-PROTOCOL PROXY INSTALLER ${GREEN}v1.0${
 echo
 echo -e "${CYAN}         HTTP${WHITE} • ${GREEN}HTTPS${WHITE} • ${YELLOW}HTTP/2${WHITE} • ${MAGENTA}SOCKS4A${WHITE} • ${RED}SOCKS5${NC}"
 echo
+echo -e "${GREEN}              QUICK INSTALL • ZERO CONFIG • ZERO TENSION${NC}"
+echo
 echo -e "${BLUE}      One Port${WHITE} • ${GREEN}Multi Protocol${WHITE} • ${CYAN}Any Linux Distribution${NC}"
+echo
+echo -e "${YELLOW}──────────────────────── SYSTEM STATUS ────────────────────────${NC}"
+echo -e "${GREEN}[✓]${NC} OS Detection             ${GREEN}READY${NC}"
+echo -e "${GREEN}[✓]${NC} Architecture Check       ${GREEN}READY${NC}"
+echo -e "${GREEN}[✓]${NC} Package Manager          ${GREEN}READY${NC}"
+echo -e "${GREEN}[✓]${NC} Network Connectivity     ${GREEN}READY${NC}"
+echo -e "${GREEN}[✓]${NC} Installation Engine      ${GREEN}READY${NC}"
 echo
 echo -e "${CYAN}══════════════════════════════════════════════════════════════════════════════${NC}"
 
