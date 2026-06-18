@@ -1,7 +1,3 @@
-Here is the updated `README.md` file that matches your repository **exactly** (no `proxy.py` file – it's embedded inside `install.sh`). Just copy everything and save as `README.md`.
-
----
-
 ```markdown
 # 🚀 BKMUniversalProxy
 
