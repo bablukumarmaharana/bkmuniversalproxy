@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="200" viewBox="0 0 800 200">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff6b6b" />
+      <stop offset="25%" style="stop-color:#ffd93d" />
+      <stop offset="50%" style="stop-color:#6bcb77" />
+      <stop offset="75%" style="stop-color:#4d96ff" />
+      <stop offset="100%" style="stop-color:#9b59b6" />
+    </linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d3436" />
+      <stop offset="100%" style="stop-color:#636e72" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="200" rx="20" fill="url(#g2)" />
+  <text x="400" y="85" font-family="Arial, sans-serif" font-size="44" font-weight="bold" text-anchor="middle" fill="url(#g1)">BKMUniversalProxy</text>
+  <text x="400" y="130" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#dfe6e9">🌐 HTTP · HTTPS · HTTP/2 · SOCKS4(A) · SOCKS5</text>
+  <text x="400" y="160" font-family="Arial, sans-serif" font-size="15" text-anchor="middle" fill="#b2bec3">📦 One port · Any Linux · Zero deps · Pure Python</text>
+  <text x="400" y="185" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#fd79a8">v1.0 · 2026</text>
+</svg>
