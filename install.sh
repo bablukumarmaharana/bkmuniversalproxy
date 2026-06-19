@@ -36,16 +36,15 @@ NC='\033[0m'
 
 display_banner() {
 
+{
 echo -e "${CYAN}══════════════════════════════════════════════════════════════════════════════${NC}"
 echo
-
 echo -e "${BLUE}██████╗${CYAN} ██╗  ██╗${GREEN}███╗   ███╗${YELLOW}██╗   ██╗${MAGENTA}███╗   ██╗${RED}██╗   ██╗${NC}"
 echo -e "${BLUE}██╔══██╗${CYAN}██║ ██╔╝${GREEN}████╗ ████║${YELLOW}██║   ██║${MAGENTA}████╗  ██║${RED}██║   ██║${NC}"
 echo -e "${BLUE}██████╔╝${CYAN}█████╔╝ ${GREEN}██╔████╔██║${YELLOW}██║   ██║${MAGENTA}██╔██╗ ██║${RED}██║   ██║${NC}"
 echo -e "${BLUE}██╔══██╗${CYAN}██╔═██╗ ${GREEN}██║╚██╔╝██║${YELLOW}██║   ██║${MAGENTA}██║╚██╗██║${RED}██║   ██║${NC}"
 echo -e "${BLUE}██████╔╝${CYAN}██║  ██╗${GREEN}██║ ╚═╝ ██║${YELLOW}╚██████╔╝${MAGENTA}██║ ╚████║${RED}╚██████╔╝${NC}"
 echo -e "${BLUE}╚═════╝ ${CYAN}╚═╝  ╚═╝${GREEN}╚═╝     ╚═╝${YELLOW} ╚═════╝ ${MAGENTA}╚═╝  ╚═══╝ ${RED}╚═════╝ ${NC}"
-
 echo
 echo -e "${WHITE}        UNIVERSAL MULTI-PROTOCOL PROXY INSTALLER ${GREEN}v1.0${NC}"
 echo
@@ -63,6 +62,9 @@ echo -e "${GREEN}[✓]${NC} Network Connectivity     ${GREEN}READY${NC}"
 echo -e "${GREEN}[✓]${NC} Installation Engine      ${GREEN}READY${NC}"
 echo
 echo -e "${CYAN}══════════════════════════════════════════════════════════════════════════════${NC}"
+} | while IFS= read -r line; do
+    printf "%*s\n" $(( (${COLUMNS:-$(tput cols)} + ${#line}) / 2 )) "$line"
+done
 
 }
 
