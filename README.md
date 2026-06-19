@@ -12,6 +12,7 @@ BKMUniversalProxy is a lightweight, zero‑dependency multi‑protocol proxy ser
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://github.com/bablukumarmaharana/bkmuniversalproxy/blob/main/banner-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://github.com/bablukumarmaharana/bkmuniversalproxy/blob/main/banner-light.svg">
+  <img src="https://github.com/bablukumarmaharana/bkmuniversalproxy/blob/main/banner-dark.svg">  <!-- Changed to dark as fallback -->
 </picture>
 ---
 
