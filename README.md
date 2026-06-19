@@ -10,9 +10,8 @@ BKMUniversalProxy is a lightweight, zero‑dependency multi‑protocol proxy ser
 
 ---
 <p align="center">
-  <img src="https://github.com/bablukumarmaharana/bkmuniversalproxy/blob/main/baner.svg" alt="BKMUniversalProxy Banner" width="800">
+  <img src="https://github.com/bablukumarmaharana/bkmuniversalproxy/blob/main/baner.svg" alt="BKMUniversalProxy - Zero Code. One Command. Ready in 60 Seconds. Any Linux." width="800">
 </p>
-
 ---
 
 ## ✨ Features
