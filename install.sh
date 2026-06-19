@@ -33,48 +33,38 @@ MAGENTA='\033[0;35m'
 CYAN='\033[0;36m'
 WHITE='\033[1;37m'
 NC='\033[0m'
-# Helper: center a line in the terminal
-center() {
-    local text="$1"
-    local cols=$(tput cols 2>/dev/null || echo 80)
-    local padding=$(( (cols - ${#text}) / 2 ))
-    printf "%*s%s\n" $padding "" "$text"
-}
 
 display_banner() {
 
-    # Top border – now centred
-    center "${CYAN}══════════════════════════════════════════════════════════════════════════════${NC}"
-    echo
+echo -e "${CYAN}══════════════════════════════════════════════════════════════════════════════${NC}"
+echo
 
-    # ASCII art – each line centred
-    center "     ${BLUE}██████╗${CYAN} ██╗  ██╗${GREEN}███╗   ███╗${YELLOW}██╗   ██╗${MAGENTA}███╗   ██╗${RED}██╗   ██╗${NC}"
-    center "     ${BLUE}██╔══██╗${CYAN}██║ ██╔╝${GREEN}████╗ ████║${YELLOW}██║   ██║${MAGENTA}████╗  ██║${RED}██║   ██║${NC}"
-    center "     ${BLUE}██████╔╝${CYAN}█████╔╝ ${GREEN}██╔████╔██║${YELLOW}██║   ██║${MAGENTA}██╔██╗ ██║${RED}██║   ██║${NC}"
-    center "     ${BLUE}██╔══██╗${CYAN}██╔═██╗ ${GREEN}██║╚██╔╝██║${YELLOW}██║   ██║${MAGENTA}██║╚██╗██║${RED}██║   ██║${NC}"
-    center "     ${BLUE}██████╔╝${CYAN}██║  ██╗${GREEN}██║ ╚═╝ ██║${YELLOW}╚██████╔╝${MAGENTA}██║ ╚████║${RED}╚██████╔╝${NC}"
-    center "     ${BLUE}╚═════╝ ${CYAN}╚═╝  ╚═╝${GREEN}╚═╝     ╚═╝${YELLOW} ╚═════╝ ${MAGENTA}╚═╝  ╚═══╝ ${RED}╚═════╝ ${NC}"
+echo -e "${BLUE}██████╗${CYAN} ██╗  ██╗${GREEN}███╗   ███╗${YELLOW}██╗   ██╗${MAGENTA}███╗   ██╗${RED}██╗   ██╗${NC}"
+echo -e "${BLUE}██╔══██╗${CYAN}██║ ██╔╝${GREEN}████╗ ████║${YELLOW}██║   ██║${MAGENTA}████╗  ██║${RED}██║   ██║${NC}"
+echo -e "${BLUE}██████╔╝${CYAN}█████╔╝ ${GREEN}██╔████╔██║${YELLOW}██║   ██║${MAGENTA}██╔██╗ ██║${RED}██║   ██║${NC}"
+echo -e "${BLUE}██╔══██╗${CYAN}██╔═██╗ ${GREEN}██║╚██╔╝██║${YELLOW}██║   ██║${MAGENTA}██║╚██╗██║${RED}██║   ██║${NC}"
+echo -e "${BLUE}██████╔╝${CYAN}██║  ██╗${GREEN}██║ ╚═╝ ██║${YELLOW}╚██████╔╝${MAGENTA}██║ ╚████║${RED}╚██████╔╝${NC}"
+echo -e "${BLUE}╚═════╝ ${CYAN}╚═╝  ╚═╝${GREEN}╚═╝     ╚═╝${YELLOW} ╚═════╝ ${MAGENTA}╚═╝  ╚═══╝ ${RED}╚═════╝ ${NC}"
 
-    echo
-    center "${WHITE}                  UNIVERSAL MULTI-PROTOCOL PROXY INSTALLER ${GREEN}v1.0${NC}"
-    echo
-    center "${CYAN}                    HTTP${WHITE} • ${GREEN}HTTPS${WHITE} • ${YELLOW}HTTP/2${WHITE} • ${MAGENTA}SOCKS4A${WHITE} • ${RED}SOCKS5${NC}"
-    echo
-    center "${GREEN}                ZERO CODE • ONE COMMAND • 60 SECONDS • ANY LINUX${NC}"
-    echo
-    center "${BLUE}                  One Port${WHITE} • ${GREEN}All Protocols${WHITE} • ${CYAN}Any Distribution${NC}"
-    echo
-    center "${YELLOW}──────────────────────── SYSTEM STATUS ────────────────────────${NC}"
-    center "                       ${GREEN}[✓]${NC} OS Detection             ${GREEN}READY${NC}"
-    center "                       ${GREEN}[✓]${NC} Architecture Check       ${GREEN}READY${NC}"
-    center "                       ${GREEN}[✓]${NC} Package Manager          ${GREEN}READY${NC}"
-    center "                       ${GREEN}[✓]${NC} Network Connectivity     ${GREEN}READY${NC}"
-    center "                       ${GREEN}[✓]${NC} Installation Engine      ${GREEN}READY${NC}"
-    echo
-    center "${CYAN}══════════════════════════════════════════════════════════════════════════════${NC}"
+echo
+echo -e "${WHITE}        UNIVERSAL MULTI-PROTOCOL PROXY INSTALLER ${GREEN}v1.0${NC}"
+echo
+echo -e "${CYAN}         HTTP${WHITE} • ${GREEN}HTTPS${WHITE} • ${YELLOW}HTTP/2${WHITE} • ${MAGENTA}SOCKS4A${WHITE} • ${RED}SOCKS5${NC}"
+echo
+echo -e "${GREEN}              QUICK INSTALL • ZERO CONFIG • ZERO TENSION${NC}"
+echo
+echo -e "${BLUE}      One Port${WHITE} • ${GREEN}Multi Protocol${WHITE} • ${CYAN}Any Linux Distribution${NC}"
+echo
+echo -e "${YELLOW}──────────────────────── SYSTEM STATUS ────────────────────────${NC}"
+echo -e "${GREEN}[✓]${NC} OS Detection             ${GREEN}READY${NC}"
+echo -e "${GREEN}[✓]${NC} Architecture Check       ${GREEN}READY${NC}"
+echo -e "${GREEN}[✓]${NC} Package Manager          ${GREEN}READY${NC}"
+echo -e "${GREEN}[✓]${NC} Network Connectivity     ${GREEN}READY${NC}"
+echo -e "${GREEN}[✓]${NC} Installation Engine      ${GREEN}READY${NC}"
+echo
+echo -e "${CYAN}══════════════════════════════════════════════════════════════════════════════${NC}"
 
 }
-
 
 # ---------- OS Detection ----------
 detect_os() {
