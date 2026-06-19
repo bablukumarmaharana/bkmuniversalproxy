@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://github.com/bablukumarmaharana/bkmuniversalproxy/blob/main/baner.svg" alt="BKMUniversalProxy Banner" width="800">
+</p>
+
 # 🚀 BKMUniversalProxy
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -10,9 +14,7 @@ BKMUniversalProxy is a lightweight, zero‑dependency multi‑protocol proxy ser
 
 
 
-<p align="center">
-  <img src="https://github.com/bablukumarmaharana/bkmuniversalproxy/blob/main/baner.svg" alt="BKMUniversalProxy Banner" width="800">
-</p>
+
 
 
 
