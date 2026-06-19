@@ -9,9 +9,10 @@
 BKMUniversalProxy is a lightweight, zero‑dependency multi‑protocol proxy server that runs on **any Linux distribution** – from Ubuntu 14.04 to RHEL 9, from Alpine to Arch, from Gentoo to Slackware. It automatically detects your OS, package manager, init system, and firewall, then sets up a fully functional proxy in seconds.
 
 ---
-<p align="center">
-  <img src="https://github.com/bablukumarmaharana/bkmuniversalproxy/blob/main/baner.svg" alt="BKMUniversalProxy - Zero Code. One Command. Ready in 60 Seconds. Any Linux." width="800">
-</p>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/bablukumarmaharana/bkmuniversalproxy/blob/main/banner-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/bablukumarmaharana/bkmuniversalproxy/blob/main/banner-light.svg">
+</picture>
 ---
 
 ## ✨ Features
