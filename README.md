@@ -9,17 +9,11 @@
 BKMUniversalProxy is a lightweight, zero‑dependency multi‑protocol proxy server that runs on **any Linux distribution** – from Ubuntu 14.04 to RHEL 9, from Alpine to Arch, from Gentoo to Slackware. It automatically detects your OS, package manager, init system, and firewall, then sets up a fully functional proxy in seconds.
 
 ```
-╔═══════════════════════════════════════════════════════════════════╗
-║                                                                   ║
-║           B K M U N I V E R S A L P R O X Y                      ║
-║                                                                   ║
-║   Universal Multi-Protocol Proxy Installer v1.0                  ║
-║   HTTP/HTTPS/HTTP2 | SOCKS4(A) | SOCKS5                         ║
-║                                                                   ║
-║   📦 One-port, multi-protocol proxy for any Linux               ║
-║   🚀 Zero external dependencies – pure Python                   ║
-║                                                                   ║
-╚═══════════════════════════════════════════════════════════════════╝
+
+<p align="center">
+  <img src="banner.svg" alt="BKMUniversalProxy Banner" width="800">
+</p>
+
 ```
 
 ---
