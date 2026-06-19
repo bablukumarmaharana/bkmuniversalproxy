@@ -23,7 +23,6 @@ else
     GREEN=''; YELLOW=''; RED=''; CYAN=''; BOLD=''; NC=''
 fi
 
-# ---------- ASCII Banner ----------
 # Colors
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -39,12 +38,14 @@ display_banner() {
 {
 echo -e "${CYAN}══════════════════════════════════════════════════════════════════════════════${NC}"
 echo
+
 echo -e "${BLUE}██████╗${CYAN} ██╗  ██╗${GREEN}███╗   ███╗${YELLOW}██╗   ██╗${MAGENTA}███╗   ██╗${RED}██╗   ██╗${NC}"
 echo -e "${BLUE}██╔══██╗${CYAN}██║ ██╔╝${GREEN}████╗ ████║${YELLOW}██║   ██║${MAGENTA}████╗  ██║${RED}██║   ██║${NC}"
 echo -e "${BLUE}██████╔╝${CYAN}█████╔╝ ${GREEN}██╔████╔██║${YELLOW}██║   ██║${MAGENTA}██╔██╗ ██║${RED}██║   ██║${NC}"
 echo -e "${BLUE}██╔══██╗${CYAN}██╔═██╗ ${GREEN}██║╚██╔╝██║${YELLOW}██║   ██║${MAGENTA}██║╚██╗██║${RED}██║   ██║${NC}"
 echo -e "${BLUE}██████╔╝${CYAN}██║  ██╗${GREEN}██║ ╚═╝ ██║${YELLOW}╚██████╔╝${MAGENTA}██║ ╚████║${RED}╚██████╔╝${NC}"
 echo -e "${BLUE}╚═════╝ ${CYAN}╚═╝  ╚═╝${GREEN}╚═╝     ╚═╝${YELLOW} ╚═════╝ ${MAGENTA}╚═╝  ╚═══╝ ${RED}╚═════╝ ${NC}"
+
 echo
 echo -e "${WHITE}        UNIVERSAL MULTI-PROTOCOL PROXY INSTALLER ${GREEN}v1.0${NC}"
 echo
@@ -63,9 +64,19 @@ echo -e "${GREEN}[✓]${NC} Installation Engine      ${GREEN}READY${NC}"
 echo
 echo -e "${CYAN}══════════════════════════════════════════════════════════════════════════════${NC}"
 } | while IFS= read -r line; do
-    printf "%*s\n" $(( (${COLUMNS:-$(tput cols)} + ${#line}) / 2 )) "$line"
+    clean_line=$(echo -e "$line" | sed 's/\x1b\[[0-9;]*m//g')
+    width=${#clean_line}
+    term_width=$(tput cols 2>/dev/null || echo 80)
+
+    if [ "$width" -lt "$term_width" ]; then
+        padding=$(( (term_width - width) / 2 ))
+        printf "%*s%s\n" "$padding" "" "$line"
+    else
+        echo -e "$line"
+    fi
 done
 
+echo
 }
 
 # ---------- OS Detection ----------
