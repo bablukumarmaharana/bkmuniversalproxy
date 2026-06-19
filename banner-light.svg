@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="270" viewBox="0 0 800 270">
+  <defs>
+    <linearGradient id="bgLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"><animate attributeName="stop-color" values="#ffffff;#f6f8fa;#ffffff" dur="10s" repeatCount="indefinite" /></stop>
+      <stop offset="100%" stop-color="#f6f8fa"><animate attributeName="stop-color" values="#f6f8fa;#ffffff;#f6f8fa" dur="10s" repeatCount="indefinite" /></stop>
+    </linearGradient>
+    <linearGradient id="titleLight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#000000" /><stop offset="100%" stop-color="#24292f" />
+    </linearGradient>
+    <linearGradient id="accentLight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#000000" /><stop offset="100%" stop-color="#57606a" />
+    </linearGradient>
+    <pattern id="gridLight" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#000000" stroke-width="0.3" opacity="0.06" />
+      <circle cx="0" cy="0" r="1" fill="#000000" opacity="0.12" />
+    </pattern>
+    <filter id="glowLight"><feGaussianBlur stdDeviation="5" result="blur" /><feComposite in="SourceGraphic" in2="blur" operator="over" /></filter>
+    <filter id="softLight"><feGaussianBlur stdDeviation="1.5" result="blur" /><feComposite in="SourceGraphic" in2="blur" operator="over" /></filter>
+  </defs>
+  <rect width="800" height="270" rx="12" fill="url(#bgLight)" /><rect width="800" height="270" rx="12" fill="url(#gridLight)" />
+  <g opacity="0.12">
+    <path d="M 0 60 Q 200 90 400 60 T 800 60" fill="none" stroke="#000000" stroke-width="1.5">
+      <animate attributeName="d" values="M 0 60 Q 200 90 400 60 T 800 60;M 0 80 Q 200 40 400 80 T 800 80;M 0 60 Q 200 90 400 60 T 800 60" dur="7s" repeatCount="indefinite" />
+    </path>
+    <path d="M 0 210 Q 200 180 400 210 T 800 210" fill="none" stroke="#000000" stroke-width="1">
+      <animate attributeName="d" values="M 0 210 Q 200 180 400 210 T 800 210;M 0 190 Q 200 230 400 190 T 800 190;M 0 210 Q 200 180 400 210 T 800 210" dur="6s" repeatCount="indefinite" />
+    </path>
+  </g>
+  <g transform="translate(100, 195)" opacity="0.5">
+    <circle cx="0" cy="0" r="42" fill="none" stroke="#d0d7de" stroke-width="1.2" /><circle cx="0" cy="0" r="28" fill="none" stroke="#57606a" stroke-width="0.8" />
+    <line x1="0" y1="0" x2="42" y2="0" stroke="#000000" stroke-width="2" stroke-linecap="round" opacity="0.7">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="6s" repeatCount="indefinite" />
+    </line>
+    <circle cx="0" cy="0" r="3" fill="#000000" filter="url(#softLight)">
+      <animate attributeName="r" values="2;4;2" dur="1.5s" repeatCount="indefinite" />
+    </circle>
+  </g>
+  <g transform="translate(700, 180)" opacity="0.6">
+    <circle cx="0" cy="0" r="2.5" fill="#1a1a1a"><animate attributeName="cy" values="0;-12;0;12;0" dur="4s" repeatCount="indefinite" /></circle>
+    <circle cx="15" cy="12" r="1.5" fill="#57606a"><animate attributeName="cy" values="12;2;12;22;12" dur="5s" repeatCount="indefinite" /></circle>
+    <line x1="0" y1="0" x2="15" y2="12" stroke="#000000" stroke-width="0.8" opacity="0.5">
+      <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2.5s" repeatCount="indefinite" />
+    </line>
+  </g>
+  <g transform="translate(180, 45)" opacity="0.4">
+    <polygon points="0,-12 10.4,-6 10.4,6 0,12 -10.4,6 -10.4,-6" fill="none" stroke="#57606a" stroke-width="1">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="25s" repeatCount="indefinite" />
+    </polygon>
+  </g>
+  <circle cx="0" cy="0" r="3" fill="#000000" filter="url(#glowLight)">
+    <animateTransform attributeName="transform" type="translate" values="-120,-60;950,310" dur="6s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0;0;1;1;0;0" dur="6s" repeatCount="indefinite" />
+  </circle>
+  <text x="400" y="85" font-family="'Inter', 'Segoe UI', Arial, sans-serif" font-size="48" font-weight="800" text-anchor="middle" fill="url(#titleLight)" filter="url(#glowLight)" letter-spacing="3">BKMUniversalProxy</text>
+  <rect x="250" y="100" width="300" height="2.5" rx="1.5" fill="#000000" filter="url(#softLight)">
+    <animate attributeName="width" values="100;400;100" dur="5s" repeatCount="indefinite" />
+    <animate attributeName="x" values="350;200;350" dur="5s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="5s" repeatCount="indefinite" />
+  </rect>
+  <circle r="4.5" fill="#000000" filter="url(#glowLight)">
+    <animate attributeName="cx" values="300;500;300" dur="5s" repeatCount="indefinite" />
+    <animate attributeName="cy" values="101.5;101.5;101.5" dur="5s" repeatCount="indefinite" />
+  </circle>
+  <text x="400" y="145" font-family="'Inter', 'Segoe UI', Arial, sans-serif" font-size="16" font-weight="500" text-anchor="middle" fill="#57606a" letter-spacing="1.5">HTTP · HTTPS · HTTP/2 · SOCKS4(A) · SOCKS5</text>
+  <text x="400" y="195" font-family="'Inter', 'Segoe UI', Arial, sans-serif" font-size="19" font-weight="600" text-anchor="middle" fill="#24292f" letter-spacing="0.8">Zero Code. <tspan fill="url(#accentLight)" filter="url(#softLight)">One Command.</tspan> Ready in <tspan fill="#000000" font-weight="700" filter="url(#softLight)">60 Seconds.</tspan> <tspan fill="url(#accentLight)" filter="url(#softLight)">Any Linux.</tspan></text>
+  <text x="400" y="240" font-family="'Inter', 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#57606a" letter-spacing="4"><tspan fill="#24292f">v1.0</tspan><tspan fill="#999999" font-weight="300"> · 2026</tspan></text>
+  <rect x="6" y="6" width="788" height="258" rx="12" fill="none" stroke="#d0d7de" stroke-width="1.5" stroke-dasharray="30 15" opacity="0.8">
+    <animate attributeName="stroke-dashoffset" from="0" to="90" dur="4s" repeatCount="indefinite" />
+    <animate attributeName="stroke-opacity" values="0.3;0.9;0.3" dur="3s" repeatCount="indefinite" />
+  </rect>
+  <path d="M 16 28 L 16 16 L 28 16" fill="none" stroke="#000000" stroke-width="2" opacity="0.7">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" />
+  </path>
+  <path d="M 784 28 L 784 16 L 772 16" fill="none" stroke="#000000" stroke-width="2" opacity="0.7">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" begin="0.5s" repeatCount="indefinite" />
+  </path>
+  <path d="M 16 242 L 16 254 L 28 254" fill="none" stroke="#000000" stroke-width="2" opacity="0.7">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" begin="1s" repeatCount="indefinite" />
+  </path>
+  <path d="M 784 242 L 784 254 L 772 254" fill="none" stroke="#000000" stroke-width="2" opacity="0.7">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" begin="1.5s" repeatCount="indefinite" />
+  </path>
+</svg>
