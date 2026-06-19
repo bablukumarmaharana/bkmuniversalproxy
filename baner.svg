@@ -1,115 +1,161 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="230" viewBox="0 0 800 230">
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="270" viewBox="0 0 800 270">
   <defs>
-    <!-- Background Gradient -->
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0a0a1a" />
-      <stop offset="100%" stop-color="#1a1a3a" />
-    </linearGradient>
-
-    <!-- Animated Rainbow Gradient for Text -->
-    <linearGradient id="rainbow" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="-1" stop-color="#ff6b6b">
-        <animate attributeName="offset" values="-1;1" dur="5s" repeatCount="indefinite" />
+    <!-- Deep Black & Dark Gray Background -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#000000">
+        <animate attributeName="stop-color" values="#000000;#0d0d0d;#000000" dur="10s" repeatCount="indefinite" />
       </stop>
-      <stop offset="0" stop-color="#feca57">
-        <animate attributeName="offset" values="-0.5;1.5" dur="5s" repeatCount="indefinite" />
-      </stop>
-      <stop offset="0.5" stop-color="#48dbfb">
-        <animate attributeName="offset" values="0;2" dur="5s" repeatCount="indefinite" />
-      </stop>
-      <stop offset="1.5" stop-color="#ff9ff3">
-        <animate attributeName="offset" values="0.5;2.5" dur="5s" repeatCount="indefinite" />
+      <stop offset="100%" stop-color="#1a1a1a">
+        <animate attributeName="stop-color" values="#1a1a1a;#262626;#1a1a1a" dur="10s" repeatCount="indefinite" />
       </stop>
     </linearGradient>
 
-    <!-- Glowing Filters -->
-    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="6" result="blur" />
+    <!-- Title Gradient: Pure White to Metallic Silver -->
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#aaaaaa" />
+    </linearGradient>
+
+    <!-- Accent Gradient for Tagline Highlights (Bright to Soft Gray) -->
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#888888" />
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.3" opacity="0.04" />
+      <circle cx="0" cy="0" r="1" fill="#ffffff" opacity="0.1" />
+    </pattern>
+
+    <!-- Monochrome Glow Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
       <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
     <filter id="softGlow" x="-10%" y="-10%" width="120%" height="120%">
-      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feGaussianBlur stdDeviation="1.5" result="blur" />
       <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
-
-    <!-- Subtle Grid Pattern -->
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.05" />
-    </pattern>
   </defs>
 
-  <!-- Background -->
-  <rect width="800" height="230" rx="16" fill="url(#bg)" />
-  <rect width="800" height="230" rx="16" fill="url(#grid)" />
+  <!-- Base Background -->
+  <rect width="800" height="270" rx="12" fill="url(#bgGrad)" />
+  <rect width="800" height="270" rx="12" fill="url(#grid)" />
 
-  <!-- Animated Orbiting Rings -->
-  <g transform="translate(400, 115)">
-    <!-- Ring 1 -->
-    <ellipse cx="0" cy="0" rx="280" ry="60" fill="none" stroke="#48dbfb" stroke-width="1.5" opacity="0.15">
-      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="30s" repeatCount="indefinite" />
-    </ellipse>
-    <!-- Ring 2 -->
-    <ellipse cx="0" cy="0" rx="180" ry="80" fill="none" stroke="#ff9ff3" stroke-width="1" opacity="0.1">
-      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="20s" repeatCount="indefinite" />
-    </ellipse>
+  <!-- Animated Data Stream Lines (Background Tech Vibe) -->
+  <g opacity="0.08">
+    <path d="M 0 60 Q 200 90 400 60 T 800 60" fill="none" stroke="#ffffff" stroke-width="1.5">
+      <animate attributeName="d" values="M 0 60 Q 200 90 400 60 T 800 60;M 0 80 Q 200 40 400 80 T 800 80;M 0 60 Q 200 90 400 60 T 800 60" dur="7s" repeatCount="indefinite" />
+    </path>
+    <path d="M 0 210 Q 200 180 400 210 T 800 210" fill="none" stroke="#ffffff" stroke-width="1">
+      <animate attributeName="d" values="M 0 210 Q 200 180 400 210 T 800 210;M 0 190 Q 200 230 400 190 T 800 190;M 0 210 Q 200 180 400 210 T 800 210" dur="6s" repeatCount="indefinite" />
+    </path>
   </g>
 
-  <!-- Floating Particles (Stars) -->
-  <circle cx="120" cy="60" r="2" fill="#fff">
-    <animate attributeName="opacity" values="0.2;1;0.2" dur="2s" repeatCount="indefinite" />
-    <animate attributeName="cy" values="60;50;60" dur="4s" repeatCount="indefinite" />
-  </circle>
-  <circle cx="680" cy="40" r="3" fill="#feca57">
-    <animate attributeName="opacity" values="0.5;0.1;0.5" dur="3s" repeatCount="indefinite" />
-    <animate attributeName="cy" values="40;50;40" dur="5s" repeatCount="indefinite" />
-  </circle>
-  <circle cx="80" cy="180" r="1.5" fill="#ff6b6b">
-    <animate attributeName="opacity" values="0.1;0.8;0.1" dur="2.5s" repeatCount="indefinite" />
-    <animate attributeName="cy" values="180;170;180" dur="3.5s" repeatCount="indefinite" />
-  </circle>
-  <circle cx="720" cy="190" r="2.5" fill="#48dbfb">
-    <animate attributeName="opacity" values="0.8;0.2;0.8" dur="4s" repeatCount="indefinite" />
-    <animate attributeName="cy" values="190;200;190" dur="6s" repeatCount="indefinite" />
-  </circle>
-  <circle cx="400" cy="20" r="1" fill="#fff">
-    <animate attributeName="opacity" values="0;0.9;0" dur="3s" repeatCount="indefinite" />
-    <animate attributeName="cy" values="20;15;20" dur="2s" repeatCount="indefinite" />
-  </circle>
+  <!-- Rotating Radar / Scanning Ring (Left) -->
+  <g transform="translate(100, 195)" opacity="0.4">
+    <circle cx="0" cy="0" r="42" fill="none" stroke="#666666" stroke-width="1.2" />
+    <circle cx="0" cy="0" r="28" fill="none" stroke="#999999" stroke-width="0.8" />
+    <line x1="0" y1="0" x2="42" y2="0" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.6">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="6s" repeatCount="indefinite" />
+    </line>
+    <circle cx="0" cy="0" r="3" fill="#ffffff" filter="url(#softGlow)">
+      <animate attributeName="r" values="2;4;2" dur="1.5s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" repeatCount="indefinite" />
+    </circle>
+  </g>
 
-  <!-- Main Title -->
-  <text x="400" y="80" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="46" font-weight="900" text-anchor="middle" fill="url(#rainbow)" filter="url(#neonGlow)" letter-spacing="3">
+  <!-- Floating Tech Nodes (Right) -->
+  <g transform="translate(700, 180)" opacity="0.5">
+    <circle cx="0" cy="0" r="2.5" fill="#eeeeee">
+      <animate attributeName="cy" values="0;-12;0;12;0" dur="4s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="15" cy="12" r="1.5" fill="#999999">
+      <animate attributeName="cy" values="12;2;12;22;12" dur="5s" repeatCount="indefinite" />
+    </circle>
+    <line x1="0" y1="0" x2="15" y2="12" stroke="#ffffff" stroke-width="0.8" opacity="0.4">
+      <animate attributeName="opacity" values="0.2;0.6;0.2" dur="2.5s" repeatCount="indefinite" />
+    </line>
+  </g>
+  <g transform="translate(180, 45)" opacity="0.3">
+    <polygon points="0,-12 10.4,-6 10.4,6 0,12 -10.4,6 -10.4,-6" fill="none" stroke="#888888" stroke-width="1">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="25s" repeatCount="indefinite" />
+    </polygon>
+  </g>
+
+  <!-- Shooting Data Packet -->
+  <g>
+    <circle cx="0" cy="0" r="3" fill="#ffffff" filter="url(#glow)">
+      <animateTransform attributeName="transform" type="translate" values="-120,-60;950,310" dur="6s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;0;1;1;0;0" dur="6s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- === MAIN TITLE === -->
+  <text x="400" y="85" font-family="'Inter', 'Segoe UI', Arial, sans-serif" font-size="48" font-weight="800" text-anchor="middle" fill="url(#titleGrad)" filter="url(#glow)" letter-spacing="3">
     BKMUniversalProxy
   </text>
 
-  <!-- Animated Sweeping Glow Line Under Title -->
-  <rect x="200" y="95" width="400" height="3" rx="1.5" fill="#feca57" filter="url(#softGlow)">
-    <animate attributeName="width" values="0;400;0" dur="4s" repeatCount="indefinite" />
-    <animate attributeName="x" values="400;200;400" dur="4s" repeatCount="indefinite" />
+  <!-- Dynamic Sweeping Underline -->
+  <rect x="250" y="100" width="300" height="2.5" rx="1.5" fill="#ffffff" filter="url(#softGlow)">
+    <animate attributeName="width" values="100;400;100" dur="5s" repeatCount="indefinite" />
+    <animate attributeName="x" values="350;200;350" dur="5s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.2;0.9;0.2" dur="5s" repeatCount="indefinite" />
   </rect>
-
-  <!-- Moving Dot on the line -->
-  <circle r="4" fill="#ff9ff3" filter="url(#neonGlow)">
-    <animate attributeName="cx" values="200;600;200" dur="4s" repeatCount="indefinite" />
-    <animate attributeName="cy" values="96.5;96.5;96.5" dur="4s" repeatCount="indefinite" />
+  <!-- Moving Accent Dot -->
+  <circle r="4.5" fill="#ffffff" filter="url(#glow)">
+    <animate attributeName="cx" values="300;500;300" dur="5s" repeatCount="indefinite" />
+    <animate attributeName="cy" values="101.5;101.5;101.5" dur="5s" repeatCount="indefinite" />
   </circle>
 
-  <!-- Subtitle: Protocols -->
-  <text x="400" y="140" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="600" text-anchor="middle" fill="#dfe6e9" letter-spacing="1">
-    🌐 HTTP · HTTPS · HTTP/2 · SOCKS4(A) · SOCKS5
+  <!-- === PROTOCOLS === -->
+  <text x="400" y="145" font-family="'Inter', 'Segoe UI', Arial, sans-serif" font-size="16" font-weight="500" text-anchor="middle" fill="#999999" letter-spacing="1.5">
+    HTTP · HTTPS · HTTP/2 · SOCKS4(A) · SOCKS5
   </text>
 
-  <!-- Tagline -->
-  <text x="400" y="170" font-family="'Segoe UI', Arial, sans-serif" font-size="15" text-anchor="middle" fill="#a0aec0" letter-spacing="0.5">
-    📦 One port · Any Linux · Zero deps · Pure Python
+  <!-- === CREATIVE TAGLINE (Fully Highlighted) === -->
+  <text x="400" y="195" font-family="'Inter', 'Segoe UI', Arial, sans-serif" font-size="19" font-weight="600" text-anchor="middle" fill="#cccccc" letter-spacing="0.8">
+    Zero Code. 
+    <tspan fill="url(#accentGrad)" filter="url(#softGlow)">
+      One Command.
+    </tspan> 
+    Ready in 
+    <tspan fill="#ffffff" font-weight="700" filter="url(#softGlow)">
+      60 Seconds.
+    </tspan> 
+    <tspan fill="url(#accentGrad)" filter="url(#softGlow)">
+      Any Linux.
+    </tspan>
   </text>
 
-  <!-- Version & Footer -->
-  <text x="400" y="205" font-family="'Segoe UI', Arial, sans-serif" font-size="12" text-anchor="middle" fill="#718096" letter-spacing="2">
-    v1.0 · 2026
+  <!-- === VERSION v1.0 (Highlighted & Pulsing) === -->
+  <text x="400" y="240" font-family="'Inter', 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#666666" letter-spacing="4" filter="url(#softGlow)">
+    <tspan fill="#aaaaaa">
+      v1.0
+    </tspan>
+    <tspan fill="#555555" font-weight="300">
+       · 2026
+    </tspan>
   </text>
 
-  <!-- Outer Glowing Border -->
-  <rect x="5" y="5" width="790" height="220" rx="12" fill="none" stroke="url(#rainbow)" stroke-width="2" opacity="0.4">
-    <animate attributeName="opacity" values="0.3;0.7;0.3" dur="5s" repeatCount="indefinite" />
+  <!-- === ANIMATED TRAVELING BORDER (Professional Dashboard) === -->
+  <rect x="6" y="6" width="788" height="258" rx="12" fill="none" stroke="#555555" stroke-width="1.5" stroke-dasharray="30 15" opacity="0.7">
+    <animate attributeName="stroke-dashoffset" from="0" to="90" dur="4s" repeatCount="indefinite" />
+    <animate attributeName="stroke-opacity" values="0.2;0.8;0.2" dur="3s" repeatCount="indefinite" />
   </rect>
+
+  <!-- Clean White Corner Accents -->
+  <path d="M 16 28 L 16 16 L 28 16" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.6">
+    <animate attributeName="opacity" values="0.3;0.9;0.3" dur="2s" repeatCount="indefinite" />
+  </path>
+  <path d="M 784 28 L 784 16 L 772 16" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.6">
+    <animate attributeName="opacity" values="0.3;0.9;0.3" dur="2s" begin="0.5s" repeatCount="indefinite" />
+  </path>
+  <path d="M 16 242 L 16 254 L 28 254" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.6">
+    <animate attributeName="opacity" values="0.3;0.9;0.3" dur="2s" begin="1s" repeatCount="indefinite" />
+  </path>
+  <path d="M 784 242 L 784 254 L 772 254" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.6">
+    <animate attributeName="opacity" values="0.3;0.9;0.3" dur="2s" begin="1.5s" repeatCount="indefinite" />
+  </path>
 </svg>
